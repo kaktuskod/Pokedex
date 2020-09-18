@@ -1,3 +1,5 @@
+import com.pokedex.pokedex.Model.Evolution
+
 class Pokemon {
     /*
         public int id { get; set; }
