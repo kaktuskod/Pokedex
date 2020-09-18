@@ -10,8 +10,9 @@ import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.pokedex.pokedex.R
 
-class PokemonListAdapter(internal var context: Context, internal var pokemonList:List<Pokemon>) : RecycleView.Adapter<PokemonListAdapter.MyViewHolder>() {
+class PokemonListAdapter(internal var context: Context, internal var pokemonList:List<Pokemon>) : RecyclerView.Adapter<PokemonListAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         val itemView = LayoutInflater.from(context).inflate(R.layout.pokemon_list_item,parent,false)
         return MyViewHolder(itemView)

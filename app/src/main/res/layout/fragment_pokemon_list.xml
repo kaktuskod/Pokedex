@@ -12,10 +12,8 @@
 
        <android.support.v7.widget.RecyclerView
            android:id="@+id/pokemon_recyclerview"
-           android_gravity="center_horizontal"
+           android:layout_gravity="center_horizontal"
            android:layout_width="wrap_content"
-           android:layout_height="wrap_content">
-
-       </android.support.v7.widget.RecyclerView>
+           android:layout_height="wrap_content" ></android.support.v7.widget.RecyclerView>
    </LinearLayout>
 </FrameLayout>

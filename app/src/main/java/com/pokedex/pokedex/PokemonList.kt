@@ -1,10 +1,10 @@
 package com.pokedex.pokedex
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.support.v4.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import com.pokedex.pokedex.Adapter.PokemonListAdapter
 import com.pokedex.pokedex.Common.Common
@@ -42,13 +42,15 @@ class PokemonList : Fragment() {
 
     private fun fetchData() {
         compositeDisposable.add(iPokemonList.listPokemon
-            .subscribeOn(Schedulers.io()))
+            .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
-            .subscribe{ pokemon ->
+            .subscribe{ pokemonDex ->
                 Common.pokemonList = pokemonDex.pokemon!!
                 val adapter = PokemonListAdapter(activity!!, Common.pokemonList)
+
                 pokemon_recyclerview.adapter = adapter
             }
+        );
     }
 
 

@@ -4,5 +4,5 @@ import Pokemon
 import com.pokedex.pokedex.PokemonList
 
 object Common {
-    val pokemonList:List<Pokemon> = ArrayList()
+    var pokemonList:List<Pokemon> = ArrayList()
 }
