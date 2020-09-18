@@ -1,8 +1,15 @@
 package com.pokedex.pokedex.Adapter
+import Pokemon
 import android.support.v7.widget.RecyclerView
 import android.content.Context
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.view.menu.MenuView
+import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class PokemonListAdapter(internal var context: Context, internal var pokemonList:List<Pokemon>) : RecycleView.Adapter<PokemonListAdapter.MyViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -18,7 +25,7 @@ class PokemonListAdapter(internal var context: Context, internal var pokemonList
         Glide.with(context).load(pokemonList[position].img).into(holder.img_pokemon)
         holder.txt_pokemon.text = pokemonList[position].name
     }
-    inner class MyViewHolder(itemView:View):RecyclerView.ViewHolder(ItemView) {
+    inner class MyViewHolder(itemView: View): RecyclerView.ViewHolder(MenuView.ItemView) {
         internal var img_pokemon:ImageView
         internal var txt_pokemon:TextView
         init{
